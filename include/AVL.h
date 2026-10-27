@@ -1,19 +1,49 @@
+#ifndef AVL_H
+#define AVL_H
 
-typedef struct NoAVL* ArvAVL;
+class ArvoreAVL{
 
-struct NoAVL {
+private:
+    struct NoAVL {
     int chave; //atributo de identificacao
-    int conteudo;//informacao armazenada no nó 
+    int altura;
     NoAVL* esquerda;
     NoAVL* direita;
+
+    NoAVL(int valor){
+        chave = valor;
+        altura =0;
+        esquerda = nullptr;
+        direita = nullptr;
+    };
+
+    };
+
+    NoAVL* raiz;
+
+    int altura_arvore(NoAVL* no);
+    int fator_balanceamento_no(struct NoAVL* no);
+
+    NoAVL* buscar(NoAVL* no, int chave);
+    int inserir(NoAVL* &no, int chave);
+    int remover(NoAVL* &no, int chave);
+    NoAVL* procuraMenor(NoAVL* atual);
+
+    void libera_no(struct NoAVL* no);
+
+    void rotacaoLL(NoAVL* &raiz);
+    void rotacaoRR(NoAVL* &raiz);
+    void rotacaoRL(NoAVL* &raiz);
+    void rotacaoLR(NoAVL* &raiz);
+
+public:
+    ArvoreAVL();
+    ~ArvoreAVL();
+
+    void inserir(int chave);
+    void remover(int chave);
+    bool buscar(int chave);
 };
 
-int altura_no(struct NoAVL* no);
-int altura_arvore(NoAVL* no);
-int fator_balanceamento_no(struct NoAVL* no);
-NoAVL *buscar(ArvAVL arvore, int chave);
-NoAVL *inserir(ArvAVL arvore, int chave);
-NoAVL *remover(ArvAVL arvore, int chave);
-ArvAVL* criar_ArvAVL();
-void libera_no(struct NoAVL* no);
-void libera_ArvAVL(ArvAVL* raiz);
+
+#endif
