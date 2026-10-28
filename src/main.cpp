@@ -14,6 +14,7 @@ void menu_rubro_negra() {
         std::cout << "2. Remover encomenda (ID)\n";
         std::cout << "3. Buscar encomenda (ID)\n";
         std::cout << "4. Visualizar estrutura da arvore\n";
+        std::cout << "5. Exibir elementos em ordem\n";
         std::cout << "0. Voltar ao menu principal\n";
         std::cout << "Escolha uma opcao: ";
         std::cin >> opcao;
@@ -40,6 +41,9 @@ void menu_rubro_negra() {
             case 4:
                 rb.imprimir_estrutura();
                 break;
+            case 5:
+                rb.imprimir_em_ordem();
+                break;
         }
     } while (opcao != 0);
 }
@@ -54,6 +58,7 @@ void menu_avl() {
         std::cout << "2. Remover encomenda (ID)\n";
         std::cout << "3. Buscar encomenda (ID)\n";
         std::cout << "4. Visualizar estrutura da arvore\n";
+        std::cout << "5. Exibir elementos em ordem\n";
         std::cout << "0. Voltar ao menu principal\n";
         std::cout << "Escolha uma opcao: ";
         std::cin >> opcao;
@@ -87,6 +92,9 @@ void menu_avl() {
                 break;
             case 4:
                 avl.imprimir_estrutura();
+                break;
+            case 5:
+                avl.imprimir_em_ordem();
                 break;
         }
     } while (opcao != 0);
