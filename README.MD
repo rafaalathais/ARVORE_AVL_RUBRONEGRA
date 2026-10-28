@@ -33,6 +33,7 @@ e depois:
 - `main.cpp`: Menu interativo do usuário e rotinas de testes automatizados.
 - `AVL.h` / `AVL.cpp`: Definição e implementação da Árvore AVL.
 - `LLRB.h` / `LLRB.cpp`: Definição e implementação da Árvore Rubro-Negra (LLRB).
+- `testes.cpp` / `graficos.py`: Implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib
 
 ## Funcionalidades do Sistema
 1. **Inserção com Tratamento:** Impede o cadastro de códigos de encomendas duplicados.
