@@ -21,19 +21,19 @@ void menu_rubro_negra() {
 
         switch (opcao) {
             case 1:
-                std::cout << "Digite o ID numérico para insercao: ";
+                std::cout << "Digite o ID numerico para insercao: ";
                 std::cin >> valor;
                 if (rb.inserir(valor) == 1) std::cout << "Sucesso!\n";
                 else std::cout << "Erro: ID duplicado ou falha.\n";
                 break;
             case 2:
-                std::cout << "Digite o ID numérico para remocao: ";
+                std::cout << "Digite o ID numerico para remocao: ";
                 std::cin >> valor;
                 if (rb.remover(valor) == 1) std::cout << "Removido com sucesso!\n";
                 else std::cout << "Erro: ID nao encontrado.\n";
                 break;
             case 3:
-                std::cout << "Digite o ID numérico para busca: ";
+                std::cout << "Digite o ID numerico para busca: ";
                 std::cin >> valor;
                 if (rb.buscar(valor)) std::cout << "Encomenda localizada no sistema.\n";
                 else std::cout << "Encomenda inexistente.\n";
@@ -65,7 +65,7 @@ void menu_avl() {
 
         switch (opcao) {
             case 1:
-                std::cout << "Digite o ID numérico para insercao: ";
+                std::cout << "Digite o ID numerico para insercao: ";
                 std::cin >> valor;
                 if (avl.buscar(valor)){
                     std::cout << "Erro: ID duplicado ou falha.\n";
@@ -75,7 +75,7 @@ void menu_avl() {
                 } 
                 break;
             case 2:
-                std::cout << "Digite o ID numérico para remocao: ";
+                std::cout << "Digite o ID numerico para remocao: ";
                 std::cin >> valor;
                 if (!avl.buscar(valor)) {
                     std::cout << "Erro: ID nao encontrado no sistema logistico.\n";

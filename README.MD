@@ -2,6 +2,8 @@
 Este projeto consiste em um protótipo de sistema logístico desenvolvido para gerenciar, buscar e remover identificadores de encomendas com alta eficiência durante o pico de acessos da Black Friday. 
 
 O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo $O(\log N)$: **Árvore AVL** e **Árvore Rubro-Negra Caída para a Esquerda (LLRB)**.
+## Autor
+* Rafaela Thais de Abreu Lúcio Maia
 
 ## Tecnologias
 * C++ - implementação das árvores
@@ -43,3 +45,22 @@ e depois:
 - `AVL.h` / `AVL.cpp`: Definição e implementação da Árvore AVL.
 - `LLRB.h` / `LLRB.cpp`: Definição e implementação da Árvore Rubro-Negra (LLRB).
 - `testes.cpp` / `graficos.py`: Implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib a fim de realizar análises comparativas dos dois tipos de árvores.
+
+## Testes e análise
+Para avaliar o comportamento das estruturas sob diferentes escalas de volume e distribuições, foram realizados testes em quatro escalas de tamanho (N) em que as duas estruuras se submeteram a inserção, busca e remoção em massa. A métricas coletadas foram: tempo de execução, altura, número de rotações.
+
+## Como rodar os testes
+Na pasta raiz do projeto execute:
+```bash
+g++ -Iinclude test/testes.cpp src/AVL.cpp src/LLRB.cpp -o testes.exe
+```
+em seguida :
+```bash
+./testes.exe 
+```
+
+Depois, para gerar os gráficos de análise, na pasta raiz do projeto execute:
+Na pasta raiz do projeto execute:
+```bash
+py test/graficos.py
+```
