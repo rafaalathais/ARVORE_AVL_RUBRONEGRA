@@ -50,6 +50,9 @@ e depois:
 Para avaliar o comportamento das estruturas sob diferentes escalas de volume e distribuições, foram realizados testes em quatro escalas de tamanho (N) em que as duas estruuras se submeteram a inserção, busca e remoção em massa. A métricas coletadas foram: tempo de execução, altura, número de rotações.
 
 ## Como rodar os testes
+Pré-requisitos:
+* Python
+
 Na pasta raiz do projeto execute:
 ```bash
 g++ -Iinclude test/testes.cpp src/AVL.cpp src/LLRB.cpp -o testes.exe
@@ -60,7 +63,6 @@ em seguida :
 ```
 
 Depois, para gerar os gráficos de análise, na pasta raiz do projeto execute:
-Na pasta raiz do projeto execute:
 ```bash
 py test/graficos.py
 ```
