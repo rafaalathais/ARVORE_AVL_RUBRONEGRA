@@ -112,3 +112,8 @@ Depois, para gerar os gráficos de análise, na pasta raiz do projeto execute:
 ```bash
 py test/graficos.py
 ```
+
+## Referências 
+* https://www.facom.ufu.br/~backes/gsi011/Aula10-Arvores.pdf
+* https://www.facom.ufu.br/~backes/gsi011/Aula11-ArvoreAVL.pdf
+* https://www.facom.ufu.br/~backes/gsi011/Aula12-ArvoreRB.pdf
