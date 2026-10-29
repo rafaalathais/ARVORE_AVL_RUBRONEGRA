@@ -1,7 +1,7 @@
 # Árvore AVL e Árvore Rubro-Negra
 Este projeto consiste em um protótipo de sistema logístico desenvolvido para gerenciar, buscar e remover identificadores de encomendas com alta eficiência durante o pico de acessos da Black Friday. 
 
-O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo $O(\log N)$: **Árvore AVL** e **Árvore Rubro-Negra Caída para a Esquerda (LLRB)**.
+O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo O(log N): **Árvore AVL** e **Árvore Rubro-Negra Caída para a Esquerda (LLRB)**.
 ## Autor
 * Rafaela Thais de Abreu Lúcio Maia
 
@@ -39,6 +39,52 @@ e depois:
    - A árvore AVL exibe o Fator de Balanceamento (FB) ao lado de cada ID.
    - A árvore Rubro-Negra destaca visualmente os nós **Vermelhos** e **Pretos** utilizando cores ANSI direto no console.
 5. **Percurso em ordem:** Impressão utilizando percurso em ordem, apresentado os elemnetos em ordem crescente.
+
+## Exmplos de uso
+Ao iniciar o programa, escolha qual árvore deseja utilizar para gerenciar os identificadores das encomendas:
+
+```text
+======= AMAZON ENGINEERING =======
+1. Gerenciar sistema usando Arvore AVL
+2. Gerenciar sistema usando Arvore Rubro-Negra (LLRB)
+0. Sair do programa
+Escolha uma opcao: 1
+```
+Após selecionar a estrutura, você poderá executar as operações de cadastro, remoção, busca, visualização e ordenação:
+```text
+--- ARVORE AVL ---
+1. Inserir encomenda (ID)
+2. Remover encomenda (ID)
+3. Buscar encomenda (ID)
+4. Visualizar estrutura da arvore
+5. Exibir elementos em ordem crescente
+0. Voltar ao menu principal
+Escolha uma opcao: 1
+
+--- ARVORE AVL ---
+1. Inserir encomenda (ID)
+2. Remover encomenda (ID)
+3. Buscar encomenda (ID)
+4. Visualizar estrutura da arvore
+5. Exibir elementos em ordem crescente
+0. Voltar ao menu principal
+Escolha uma opcao: 1
+Digite o ID numerico para insercao: 20
+Sucesso!
+
+--- ARVORE AVL ---
+1. Inserir encomenda (ID)
+2. Remover encomenda (ID)
+3. Buscar encomenda (ID)
+4. Visualizar estrutura da arvore
+5. Exibir elementos em ordem crescente
+0. Voltar ao menu principal
+Escolha uma opcao: 4
+
+===== ESTRUTURA DA ARVORE AVL =====
+/-- 20 (FB:0)
+================================
+```
 
 ## Estrutura do Repositório
 - `main.cpp`: Menu interativo do usuário e rotinas de testes automatizados.
