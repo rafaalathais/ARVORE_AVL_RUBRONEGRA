@@ -1,4 +1,4 @@
-# Árvore AVL e Árvore Rubro-Negra
+# Árvore AVL e Árvore Rubro-Negra (LLRB)
 Este projeto consiste em um protótipo de sistema logístico desenvolvido para gerenciar, buscar e remover identificadores de encomendas com alta eficiência durante o pico de acessos da Black Friday. 
 
 O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo O(log N): **Árvore AVL** e **Árvore Rubro-Negra Caída para a Esquerda (LLRB)**.
