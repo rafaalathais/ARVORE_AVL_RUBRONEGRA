@@ -14,7 +14,7 @@ void menu_rubro_negra() {
         std::cout << "2. Remover encomenda (ID)\n";
         std::cout << "3. Buscar encomenda (ID)\n";
         std::cout << "4. Visualizar estrutura da arvore\n";
-        std::cout << "5. Exibir elementos em ordem\n";
+        std::cout << "5. Exibir elementos em ordem crescente\n";
         std::cout << "0. Voltar ao menu principal\n";
         std::cout << "Escolha uma opcao: ";
         std::cin >> opcao;
@@ -58,7 +58,7 @@ void menu_avl() {
         std::cout << "2. Remover encomenda (ID)\n";
         std::cout << "3. Buscar encomenda (ID)\n";
         std::cout << "4. Visualizar estrutura da arvore\n";
-        std::cout << "5. Exibir elementos em ordem\n";
+        std::cout << "5. Exibir elementos em ordem crescente\n";
         std::cout << "0. Voltar ao menu principal\n";
         std::cout << "Escolha uma opcao: ";
         std::cin >> opcao;

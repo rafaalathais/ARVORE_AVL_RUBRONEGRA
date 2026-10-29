@@ -29,16 +29,17 @@ e depois:
 ```bash
 ./programa 
 ```
-## Estrutura do Repositório
-- `main.cpp`: Menu interativo do usuário e rotinas de testes automatizados.
-- `AVL.h` / `AVL.cpp`: Definição e implementação da Árvore AVL.
-- `LLRB.h` / `LLRB.cpp`: Definição e implementação da Árvore Rubro-Negra (LLRB).
-- `testes.cpp` / `graficos.py`: Implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib
-
 ## Funcionalidades do Sistema
 1. **Inserção com Tratamento:** Impede o cadastro de códigos de encomendas duplicados.
 2. **Remoção Segura:** Bloqueia a exclusão de IDs inexistentes e rebalanceia a estrutura em tempo de execução.
 3. **Busca Eficiente:** Localiza encomendas instantaneamente indicando se o código reside ou não na base de dados.
-4. **Visualização Textual com Cores:** 
+4. **Visualização da estrutura:** 
    - A árvore AVL exibe o Fator de Balanceamento (FB) ao lado de cada ID.
    - A árvore Rubro-Negra destaca visualmente os nós **Vermelhos** e **Pretos** utilizando cores ANSI direto no console.
+5. **Percurso em ordem:** Impressão utilizando percurso em ordem, apresentado os elemnetos em ordem crescente.
+
+## Estrutura do Repositório
+- `main.cpp`: Menu interativo do usuário e rotinas de testes automatizados.
+- `AVL.h` / `AVL.cpp`: Definição e implementação da Árvore AVL.
+- `LLRB.h` / `LLRB.cpp`: Definição e implementação da Árvore Rubro-Negra (LLRB).
+- `testes.cpp` / `graficos.py`: Implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib a fim de realizar análises comparativas dos dois tipos de árvores.
