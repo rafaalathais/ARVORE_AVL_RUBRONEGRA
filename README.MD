@@ -1,43 +1,17 @@
 # Árvore AVL e Árvore Rubro-Negra (LLRB)
-Este projeto consiste em um protótipo de sistema logístico desenvolvido para gerenciar, buscar e remover identificadores de encomendas com alta eficiência durante o pico de acessos da Black Friday. 
-
-O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo O(log N): **Árvore AVL** e **Árvore Rubro-Negra Caída para a Esquerda (LLRB)**.
-## Autor
-* Rafaela Thais de Abreu Lúcio Maia
+Este projeto consiste em um protótipo de sistema logístico desenvolvido para gerenciar, buscar e remover identificadores de encomendas com alta eficiência durante o pico de acessos da Black Friday. O sistema foi implementado utilizando duas estruturas de árvores balanceadas para garantir operações em tempo O(log N): **Árvore AVL** e **Árvore Rubro-Negra caída para a esquerda (LLRB)**.
 
 ## Tecnologias
-* C++ - implementação das árvores
-* Python 3 - testes e gráficos
+* C++ - implementação das árvores e testes
+* Python 3 - gráficos
 
-## Como compilar e executar
-Pré-requisitos:
-* Compilador GCC/C++
-
-### Windows
-Na pasta raiz do projeto execute:
-```bash
-g++ -Iinclude src/main.cpp src/AVL.cpp src/LLRB.cpp -o programa.exe
-```
-e depois:
-```bash
-./programa.exe 
-```
-### Linux / macOS
-Na pasta raiz do projeto execute:
-```bash
-g++ -Iinclude src/main.cpp src/AVL.cpp src/LLRB.cpp -o programa
-```
-e depois:
-```bash
-./programa 
-```
 ## Funcionalidades do Sistema
-1. **Inserção com Tratamento:** Impede o cadastro de códigos de encomendas duplicados.
-2. **Remoção Segura:** Bloqueia a exclusão de IDs inexistentes e rebalanceia a estrutura em tempo de execução.
-3. **Busca Eficiente:** Localiza encomendas instantaneamente indicando se o código reside ou não na base de dados.
+1. **Inserção:** Insere um novo ID na árvore e impede o cadastro de códigos de encomendas duplicados.
+2. **Remoção:** Remove um ID da árvore, bloqueia a exclusão de IDs inexistentes e rebalanceia a estrutura em tempo de execução.
+3. **Busca:** Localiza encomendas instantaneamente indicando se o código reside ou não na base de dados.
 4. **Visualização da estrutura:** 
-   - A árvore AVL exibe o Fator de Balanceamento (FB) ao lado de cada ID.
-   - A árvore Rubro-Negra destaca visualmente os nós **Vermelhos** e **Pretos** utilizando cores ANSI direto no console.
+   - A árvore AVL exibe o fator de balanceamento (FB) ao lado de cada ID.
+   - A árvore Rubro-Negra destaca visualmente os nós **vermelhos** e **pretos**.
 5. **Percurso em ordem:** Impressão utilizando percurso em ordem, apresentado os elemnetos em ordem crescente.
 
 ## Exmplos de uso
@@ -50,7 +24,7 @@ Ao iniciar o programa, escolha qual árvore deseja utilizar para gerenciar os id
 0. Sair do programa
 Escolha uma opcao: 1
 ```
-Após selecionar a estrutura, você poderá executar as operações de cadastro, remoção, busca, visualização e ordenação:
+Após selecionar a estrutura, você poderá executar as operações de cadastro, remoção, busca, visualização e exibição ordenada (crescente):
 ```text
 --- ARVORE AVL ---
 1. Inserir encomenda (ID)
@@ -87,24 +61,48 @@ Escolha uma opcao: 4
 ```
 
 ## Estrutura do Repositório
-- `main.cpp`: Menu interativo do usuário e rotinas de testes automatizados.
-- `AVL.h` / `AVL.cpp`: Definição e implementação da Árvore AVL.
-- `LLRB.h` / `LLRB.cpp`: Definição e implementação da Árvore Rubro-Negra (LLRB).
-- `testes.cpp` / `graficos.py`: Implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib a fim de realizar análises comparativas dos dois tipos de árvores.
+- `main.cpp`: menu interativo do usuário.
+- `AVL.h` / `AVL.cpp`: definição e implementação da árvore AVL.
+- `LLRB.h` / `LLRB.cpp`: definição e implementação da árvore LLRB.
+- `testes.cpp` / `graficos.py`: implementação de testes para diferentes cenários do conjunto de dados e geração dos gráficos com matploltlib a fim de realizar análises comparativas dos dois tipos de árvores.
+- `programa.exe`: arquivo executável do programa principal
+- `dados_testes.csv`: csv com dados gravados por testes.cpp
+- `testes.exe`: arquivo executável dos testes
 
-## Testes e análise
-Para avaliar o comportamento das estruturas sob diferentes escalas de volume e distribuições, foram realizados testes em quatro escalas de tamanho (N) em que as duas estruuras se submeteram a inserção, busca e remoção em massa. A métricas coletadas foram: tempo de execução, altura, número de rotações.
+## Como compilar e executar
+Pré-requisitos:
+* Compilador GCC/C++
+
+### Windows
+Na pasta raiz do projeto execute:
+```bash
+g++ -Iinclude src/main.cpp src/AVL.cpp src/LLRB.cpp -o programa.exe
+./programa.exe 
+```
+### Linux / macOS
+Na pasta raiz do projeto execute:
+```bash
+g++ -Iinclude src/main.cpp src/AVL.cpp src/LLRB.cpp -o programa
+./programa 
+```
+
+## Decisões de Implementação
+* **Mapeamento de cores:** atributo booleano (`cor = true` para vermelho, `false` para preto), os nós nulos (`nullptr`) são tratados como pretos por definição.
+* **Interface CLI:** exibição da estrutura com fatores de balanceamento na AVL e marcadores de cor na LLRB via terminal.
+* **Retorno da função buscar:** retorno booleano, pois agiliza a verificação.
+* **Passagem por referência:** evita o custo de cópia de variáveis globais e locais.
+
+## Testes e Análise
+Para avaliar o comportamento das estruturas sob diferentes escalas de volume e distribuições, foram realizados testes em quatro escalas de tamanho (N) em que as duas estruuras se submeteram a inserção, busca e remoção em massa. As métricas coletadas foram: tempo de execução, altura e número de rotações.
 
 ## Como rodar os testes
 Pré-requisitos:
+* Compilador GCC/C++
 * Python
 
 Na pasta raiz do projeto execute:
 ```bash
 g++ -Iinclude test/testes.cpp src/AVL.cpp src/LLRB.cpp -o testes.exe
-```
-em seguida :
-```bash
 ./testes.exe 
 ```
 
@@ -112,8 +110,11 @@ Depois, para gerar os gráficos de análise, na pasta raiz do projeto execute:
 ```bash
 py test/graficos.py
 ```
+## Autor
+* Rafaela Thais de Abreu Lúcio Maia
 
 ## Referências 
+Este projeto contou com o auxílio pontual da inteligência artificial generativa Google Gemini para suporte na estruturação dos scripts de visualização de dados e auxílio na implementação do código em C++. A lógica das árvores balanceadas foi desenvolvida pelo autor, utilizando como referência:
 * https://www.facom.ufu.br/~backes/gsi011/Aula10-Arvores.pdf
 * https://www.facom.ufu.br/~backes/gsi011/Aula11-ArvoreAVL.pdf
 * https://www.facom.ufu.br/~backes/gsi011/Aula12-ArvoreRB.pdf
